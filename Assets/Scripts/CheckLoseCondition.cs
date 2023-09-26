@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CheckLoseCondition : MonoBehaviour
 {
+    [SerializeField] private GameObject loseUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,8 @@ public class CheckLoseCondition : MonoBehaviour
         if (other.CompareTag("Alien"))
         {
             // Trigger lose condition
+            loseUI.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
