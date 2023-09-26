@@ -149,8 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1407069237195584122, guid: 9fcf49b6919111e4190306bdf5d79008, type: 3}
-  projectileSpeed: 5
-  projectileDamage: 1
 --- !u!50 &8732267699637144959
 Rigidbody2D:
   serializedVersion: 4

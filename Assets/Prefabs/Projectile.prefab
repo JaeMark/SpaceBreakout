@@ -97,7 +97,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1407069237195584122}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -126,8 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f506a98ce6a80347839844056bdbab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 5
-  directReflectionVelocityThreshold: 1
+  projectileSpeed: 0.5
+  projectileSpeedIncrement: 0.1
+  projectileLifetime: 10
 --- !u!58 &-3707933947366343554
 CircleCollider2D:
   m_ObjectHideFlags: 0

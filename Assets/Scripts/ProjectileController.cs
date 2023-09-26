@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    [SerializeField] private float projectileSpeed = 0f;
-    [SerializeField] private float projectileSpeedIncrement = 0.01f;
+    [SerializeField] private float projectileSpeed = 0.5f;
+    [SerializeField] private float projectileSpeedIncrement = 0.1f;
     [SerializeField] private float projectileLifetime = 10.0f;
 
     private bool isReflected = false;
