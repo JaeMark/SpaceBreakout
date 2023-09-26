@@ -51,7 +51,7 @@ public class AlienController : MonoBehaviour
     private void Shoot()
     {
         // Instantiate a projectile and set its position and direction
-        GameObject projectile = Instantiate(projectilePrefab, transform.position + Vector3.down * 1.0f, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, transform.position + Vector3.down * 1.0f, transform.rotation);
     }
 
 

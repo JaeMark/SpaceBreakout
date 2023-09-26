@@ -22,7 +22,8 @@ public class ProjectileController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(0, -projectileSpeed * Time.deltaTime, 0);
+        transform.Translate(Vector3.down * projectileSpeed * Time.deltaTime);
+        //transform.Translate(0, -projectileSpeed * Time.deltaTime, 0);
         projectileSpeed += projectileSpeedIncrement;
     }
 
