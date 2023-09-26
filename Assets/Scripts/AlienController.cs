@@ -6,6 +6,7 @@ public class AlienController : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject playerShip;
+    [SerializeField] private GameObject muzzle;
     [SerializeField] private float rotationSpeed = 1f;
 
     private bool isShooter = false;
@@ -42,7 +43,7 @@ public class AlienController : MonoBehaviour
         }
 
         float randomProbability = Random.Range(0f, 1f);
-        if (randomProbability <= 0.1f)
+        if (randomProbability <= 0.1f && isShooter)
         {
             Shoot();
         }
@@ -51,9 +52,8 @@ public class AlienController : MonoBehaviour
     private void Shoot()
     {
         // Instantiate a projectile and set its position and direction
-        GameObject projectile = Instantiate(projectilePrefab, transform.position + Vector3.down * 1.0f, transform.rotation);
+        GameObject projectile = Instantiate(projectilePrefab, muzzle.transform.position, transform.rotation);
     }
-
 
     private void TrackPlayerShip()
     {
