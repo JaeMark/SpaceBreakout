@@ -9,16 +9,21 @@ public class AlienController : MonoBehaviour
     [SerializeField] private GameObject muzzle;
     [SerializeField] private float rotationSpeed = 1f;
 
-    private bool isShooter = false;
+    private bool isGunner = false;
     private void Start()
     {
+        // Set a gunner 
+        if (CheckIfGunner())
+        {
+            AlienSwarmManager.Instance.SetAsGunner(gameObject);
+        }
         // Schedule the shooting every 5 seconds
-        InvokeRepeating("TryShoot", 0f, 1f);
+       // InvokeRepeating("TryShoot", 0f, 1f);
     }
 
     private void Update()
     {
-        if (isShooter)
+        if (isGunner)
         {
             TrackPlayerShip();
         }
@@ -30,26 +35,38 @@ public class AlienController : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position - transform.up * 1f);
     }
 
+    public bool CheckIfGunner()
+    {
+        // The alien ship is a gunner if no alien ship is below it
+        Vector2 raycastOrigin = transform.position + Vector3.down * 1.0f; // Adjusted origin point
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, 10.0f, LayerMask.GetMask("Alien"));
+        isGunner = hit.collider == null;
+        return isGunner;
+    }
+
     private void TryShoot()
     {
-        if (!isShooter)
+        /*
+        if (!isGunner)
         {
             Vector2 raycastOrigin = transform.position + Vector3.down * 1.0f; // Adjusted origin point
             RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, 10.0f, LayerMask.GetMask("Alien"));
             if (hit.collider == null)
             {
-                isShooter = true;
+                isGunner = true;
             }
         }
+        */
+
 
         float randomProbability = Random.Range(0f, 1f);
-        if (randomProbability <= 0.1f && isShooter)
+        if (randomProbability <= 0.1f && isGunner)
         {
             Shoot();
         }
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         // Instantiate a projectile and set its position and direction
         GameObject projectile = Instantiate(projectilePrefab, muzzle.transform.position, transform.rotation);
@@ -70,7 +87,6 @@ public class AlienController : MonoBehaviour
 
     public void DestroyAlien()
     {
-        AlienSwarmManager.Instance.OnDestroyEvent();
-        Destroy(gameObject);
+        AlienSwarmManager.Instance.OnDestroyEvent(gameObject);
     }
 }
