@@ -10,18 +10,22 @@ public class AlienSwarmGunnerManager : MonoBehaviour
     private List<GameObject> alienGunners = new List<GameObject>();
     private List<GameObject> remainingAliens = new List<GameObject>();
 
-    private int numDestroyed = 0;
+    private Coroutine commandToShootCoroutine;
     public void Start()
     {
         foreach (GameObject alien in alienShips)
         {
             remainingAliens.Add(alien);
         }
+        commandToShootCoroutine = StartCoroutine(CommandToShoot());
     }
 
     public void OnDestroyEvent(GameObject alienToDestroy)
     {
-        numDestroyed++;
+        if (commandToShootCoroutine != null)
+        {
+            StopCoroutine(commandToShootCoroutine);
+        }
 
         if (remainingAliens.Contains(alienToDestroy))
         {
@@ -34,7 +38,7 @@ public class AlienSwarmGunnerManager : MonoBehaviour
             UpdateGunnerList();
         }
 
-        StartCoroutine(CommandToShoot());
+        commandToShootCoroutine = StartCoroutine(CommandToShoot());
     }
 
     public void SetAsGunner(GameObject gunner)
@@ -65,10 +69,9 @@ public class AlienSwarmGunnerManager : MonoBehaviour
         {
             yield return new WaitForSeconds(shootInterval);
 
-            if (alienGunners.Count > 0)
+            int randomIndex = Random.Range(0, alienGunners.Count);
+            if (alienGunners.Count > 0 && alienGunners[randomIndex] != null)
             {
-                int randomIndex = Random.Range(0, alienGunners.Count);
-                Debug.Log("Shooting");
                 alienGunners[randomIndex].GetComponent<AlienController>().Shoot();
             }
         }

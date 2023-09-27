@@ -34,7 +34,10 @@ public class AlienSwarmMovementController : MonoBehaviour
 
     public void ChangeDirection()
     {
-        StopCoroutine(swarmMovementCoroutine);
+        if (swarmMovementCoroutine != null)
+        {
+            StopCoroutine(swarmMovementCoroutine);
+        }
 
         isMovingRight = !isMovingRight;
         MoveSwarmDown();
@@ -53,8 +56,6 @@ public class AlienSwarmMovementController : MonoBehaviour
         {
             horizontalSpeed += speedIncreasePerDestroyedAlien;
         }
-
-        Destroy(alienToDestroy);
     }
 
     private bool IsSwarmDestroyed()

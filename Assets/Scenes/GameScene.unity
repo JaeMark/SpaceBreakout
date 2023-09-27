@@ -203,6 +203,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39560790}
   m_CullTransparentMesh: 1
+--- !u!1 &125926484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+  m_PrefabInstance: {fileID: 968845095593809307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &125926487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125926484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60896fb706045f84e8c13af0f8731100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienShips:
+  - {fileID: 1878969103}
+  - {fileID: 11913684}
+  - {fileID: 685187103}
+  - {fileID: 2078842141}
+  - {fileID: 454192850}
+  - {fileID: 191982746}
+  - {fileID: 1599688052}
+  - {fileID: 1274283468}
+  - {fileID: 2005750321}
+  - {fileID: 1509105895}
+  - {fileID: 941024785}
+  - {fileID: 536553591}
+  - {fileID: 610186811}
+  - {fileID: 1653266155}
+  - {fileID: 1102937543}
+  - {fileID: 580957942}
+  - {fileID: 941184660}
+  - {fileID: 180532949}
+  - {fileID: 873763248}
+  - {fileID: 819771058}
+  - {fileID: 2096774720}
+  - {fileID: 381125321}
+  - {fileID: 939750492}
+  - {fileID: 1149406264}
+  - {fileID: 1089366147}
+  horizontalSpeed: 0.1
+  descentSpeed: 0.5
+  speedIncreasePerDestroyedAlien: 0.1
+--- !u!114 &125926488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125926484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e45a5a508f3c64184952e20a5415db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienShips:
+  - {fileID: 1878969103}
+  - {fileID: 11913684}
+  - {fileID: 685187103}
+  - {fileID: 2078842141}
+  - {fileID: 454192850}
+  - {fileID: 191982746}
+  - {fileID: 1599688052}
+  - {fileID: 1274283468}
+  - {fileID: 2005750321}
+  - {fileID: 1509105895}
+  - {fileID: 941024785}
+  - {fileID: 536553591}
+  - {fileID: 610186811}
+  - {fileID: 1653266155}
+  - {fileID: 1102937543}
+  - {fileID: 580957942}
+  - {fileID: 941184660}
+  - {fileID: 180532949}
+  - {fileID: 873763248}
+  - {fileID: 819771058}
+  - {fileID: 2096774720}
+  - {fileID: 381125321}
+  - {fileID: 939750492}
+  - {fileID: 1149406264}
+  - {fileID: 1089366147}
+  shootInterval: 1
 --- !u!1 &180532949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 292751069413613250, guid: c553b18926bb08f4ca050785867e5566, type: 3}
@@ -1450,18 +1535,50 @@ PrefabInstance:
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 244515181447865431, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 244515181447865431, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 421523991725598173, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 421523991725598173, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 421523991725598173, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 518467232275696275, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 518467232275696275, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 518467232275696275, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 817372977070198704, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 817372977070198704, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 817372977070198704, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 1472484132603141343, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1506,30 +1623,90 @@ PrefabInstance:
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 1719019449170286253, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 1719019449170286253, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 1890794786271642412, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 1890794786271642412, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 1890794786271642412, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 2057175408493745027, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 2057175408493745027, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 2057175408493745027, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 2196648645203154747, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 2196648645203154747, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 2196648645203154747, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 2496018476007932644, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 2496018476007932644, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 2496018476007932644, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
+    - target: {fileID: 2646389171778365987, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2646389171778365987, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 2646389171778365987, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 2646389171778365987, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 2871149408820308081, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 2871149408820308081, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 2871149408820308081, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 3163496615525179940, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -1554,26 +1731,74 @@ PrefabInstance:
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 3209529182823121348, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 3209529182823121348, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 3670718567233840480, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 3670718567233840480, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 3670718567233840480, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 4152738736138131791, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 4152738736138131791, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 4152738736138131791, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 4239254803925328334, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 4239254803925328334, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 4239254803925328334, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 4797930090650043854, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 4797930090650043854, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 4797930090650043854, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 4830241658579358209, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 4830241658579358209, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 4830241658579358209, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: m_Name
       value: AlienSwarm
@@ -1582,6 +1807,18 @@ PrefabInstance:
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 5484190607792713635, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 5484190607792713635, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
+    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: alienShips.Array.size
       value: 25
@@ -1690,34 +1927,96 @@ PrefabInstance:
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 6778152995518685549, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 6778152995518685549, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 6959320389135616098, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 6959320389135616098, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 6959320389135616098, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 7202938912728894000, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 7202938912728894000, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 7202938912728894000, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 7345236564831806199, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 7345236564831806199, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 7345236564831806199, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 8214265239465346302, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 8214265239465346302, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 8214265239465346302, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 9050262597853970909, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 9050262597853970909, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 9050262597853970909, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     - target: {fileID: 9146067339887114588, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
+    - target: {fileID: 9146067339887114588, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 125926488}
+    - target: {fileID: 9146067339887114588, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125926488}
+    - targetCorrespondingSourceObject: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125926487}
   m_SourcePrefab: {fileID: 100100000, guid: c553b18926bb08f4ca050785867e5566, type: 3}
 --- !u!1001 &6026053639334529601
 PrefabInstance:

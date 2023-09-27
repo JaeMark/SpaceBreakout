@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AlienController : MonoBehaviour
 {
+    [SerializeField] private AlienSwarmMovementController alienSwarmMovementController;
+    [SerializeField] private AlienSwarmGunnerManager alienSwarmGunnerManager;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject playerShip;
     [SerializeField] private GameObject muzzle;
@@ -15,10 +17,8 @@ public class AlienController : MonoBehaviour
         // Set a gunner 
         if (CheckIfGunner())
         {
-            AlienSwarmManager.Instance.SetAsGunner(gameObject);
+            alienSwarmGunnerManager.SetAsGunner(gameObject);
         }
-        // Schedule the shooting every 5 seconds
-       // InvokeRepeating("TryShoot", 0f, 1f);
     }
 
     private void Update()
@@ -44,28 +44,6 @@ public class AlienController : MonoBehaviour
         return isGunner;
     }
 
-    private void TryShoot()
-    {
-        /*
-        if (!isGunner)
-        {
-            Vector2 raycastOrigin = transform.position + Vector3.down * 1.0f; // Adjusted origin point
-            RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, 10.0f, LayerMask.GetMask("Alien"));
-            if (hit.collider == null)
-            {
-                isGunner = true;
-            }
-        }
-        */
-
-
-        float randomProbability = Random.Range(0f, 1f);
-        if (randomProbability <= 0.1f && isGunner)
-        {
-            Shoot();
-        }
-    }
-
     public void Shoot()
     {
         // Instantiate a projectile and set its position and direction
@@ -87,6 +65,8 @@ public class AlienController : MonoBehaviour
 
     public void DestroyAlien()
     {
-        AlienSwarmManager.Instance.OnDestroyEvent(gameObject);
+        alienSwarmGunnerManager.OnDestroyEvent(gameObject);
+        alienSwarmMovementController.OnDestroyEvent(gameObject);
+        Destroy(gameObject);
     }
 }
