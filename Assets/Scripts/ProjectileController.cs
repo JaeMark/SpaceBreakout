@@ -63,6 +63,7 @@ public class ProjectileController : MonoBehaviour
         {
             reflectionAngle = transform.rotation.eulerAngles.z - 270.0f;
         }
+        Debug.Log("Border Reflection Angle: " + reflectionAngle);
 
         // Apply the reflection angle to the projectile
         transform.rotation = Quaternion.Euler(0, 0, reflectionAngle);

@@ -62,7 +62,8 @@ public class AlienSwarmManager : MonoBehaviour
         numDestroyed++;
         if (IsSwarmDestroyed())
         {
-
+            // Trigger win state
+            GameStateHandler.Instance.TriggerWinState();
         }
         else
         {

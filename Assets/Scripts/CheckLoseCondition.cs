@@ -16,9 +16,8 @@ public class CheckLoseCondition : MonoBehaviour
     {
         if (other.CompareTag("Alien"))
         {
-            // Trigger lose condition
-            loseUI.SetActive(true);
-            Time.timeScale = 0;
+            // Trigger lose state
+            GameStateHandler.Instance.TriggerLoseState();
         }
     }
 }
