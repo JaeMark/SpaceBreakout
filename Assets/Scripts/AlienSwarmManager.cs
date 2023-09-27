@@ -5,11 +5,13 @@ using UnityEngine.Events;
 
 public class AlienSwarmManager : MonoBehaviour
 {
+    [SerializeField] private GameObject[] alienShips;
     [SerializeField] private float horizontalSpeed = 0.1f;
     [SerializeField] private float descentSpeed = 0.5f;
     [SerializeField] private float speedIncreasePerDestroyedAlien = 0.1f;
 
     private bool isMovingRight = true;
+    private int numDestroyed = 0;
     private Coroutine swarmMovementCoroutine;
     public static AlienSwarmManager Instance; 
 
@@ -57,6 +59,20 @@ public class AlienSwarmManager : MonoBehaviour
 
     public void OnDestroyEvent()
     {
-        horizontalSpeed += speedIncreasePerDestroyedAlien;
+        numDestroyed++;
+        if (IsSwarmDestroyed())
+        {
+
+        }
+        else
+        {
+            horizontalSpeed += speedIncreasePerDestroyedAlien;
+        }
+
+    }
+
+    private bool IsSwarmDestroyed()
+    {
+        return numDestroyed == alienShips.Length;
     }
 }
