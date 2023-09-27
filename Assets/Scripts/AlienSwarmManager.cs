@@ -93,14 +93,14 @@ public class AlienSwarmManager : MonoBehaviour
             horizontalSpeed += speedIncreasePerDestroyedAlien;
         }
 
+        Destroy(alienToDestroy);
+
         // Remove from gunner list if applicable
         if (alienGunners.Contains(alienToDestroy))
         {
             alienGunners.Remove(alienToDestroy);
             UpdateGunnerList();
         }
-
-        Destroy(alienToDestroy);
         commandToShootCoroutine = StartCoroutine(CommandToShoot());
     }
 
