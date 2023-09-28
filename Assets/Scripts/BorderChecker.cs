@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class BorderChecker : MonoBehaviour
 {
+    [SerializeField] private AlienSwarmMovementController alienSwarmMovementController;
+
     private bool eventTriggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -10,7 +12,7 @@ public class BorderChecker : MonoBehaviour
         if (other.CompareTag("Alien") && !eventTriggered)
         {
             eventTriggered = true;
-            AlienSwarmManager.Instance.ChangeDirection();
+            alienSwarmMovementController.ChangeDirection();
         }
     }
 

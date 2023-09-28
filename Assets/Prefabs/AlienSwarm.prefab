@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472484132603141343}
-  - component: {fileID: 5524729530540834241}
+  - component: {fileID: 8892092795373465435}
+  - component: {fileID: 5041959377186628479}
   m_Layer: 0
   m_Name: AlienSwarm
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   - {fileID: 3085563043749915728}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5524729530540834241
+--- !u!114 &8892092795373465435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,12 +47,76 @@ MonoBehaviour:
   m_GameObject: {fileID: 5353505163568727831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407223ae001c37d449e907aa27ed1260, type: 3}
+  m_Script: {fileID: 11500000, guid: 48e45a5a508f3c64184952e20a5415db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alienSwarm: []
-  horizontalSpeed: 0.5
-  descentSpeed: 0.25
+  alienShips:
+  - {fileID: 7562065638538140367}
+  - {fileID: 6906644279544535666}
+  - {fileID: 2853070318714535538}
+  - {fileID: 9131335601133294988}
+  - {fileID: 5861221416701161503}
+  - {fileID: 7179199976917116640}
+  - {fileID: 4221175440601544653}
+  - {fileID: 8692925996504218955}
+  - {fileID: 5083534377407212588}
+  - {fileID: 1771447683638966881}
+  - {fileID: 6977204470601080417}
+  - {fileID: 4176283193788134815}
+  - {fileID: 1592897655726608396}
+  - {fileID: 2660926436598236915}
+  - {fileID: 9068145853057275870}
+  - {fileID: 4607002143875210584}
+  - {fileID: 6715199664668194108}
+  - {fileID: 292751069413613250}
+  - {fileID: 3170031667533085521}
+  - {fileID: 1803883537180208558}
+  - {fileID: 4629043322605173891}
+  - {fileID: 6441388765356514296}
+  - {fileID: 8541728145916280427}
+  - {fileID: 4935041370064349332}
+  - {fileID: 5610348943359600898}
+  shootInterval: 1
+--- !u!114 &5041959377186628479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353505163568727831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60896fb706045f84e8c13af0f8731100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienShips:
+  - {fileID: 7562065638538140367}
+  - {fileID: 6906644279544535666}
+  - {fileID: 2853070318714535538}
+  - {fileID: 9131335601133294988}
+  - {fileID: 5861221416701161503}
+  - {fileID: 7179199976917116640}
+  - {fileID: 4221175440601544653}
+  - {fileID: 8692925996504218955}
+  - {fileID: 5083534377407212588}
+  - {fileID: 1771447683638966881}
+  - {fileID: 6977204470601080417}
+  - {fileID: 4176283193788134815}
+  - {fileID: 1592897655726608396}
+  - {fileID: 2660926436598236915}
+  - {fileID: 9068145853057275870}
+  - {fileID: 4607002143875210584}
+  - {fileID: 6715199664668194108}
+  - {fileID: 292751069413613250}
+  - {fileID: 3170031667533085521}
+  - {fileID: 1803883537180208558}
+  - {fileID: 4629043322605173891}
+  - {fileID: 6441388765356514296}
+  - {fileID: 8541728145916280427}
+  - {fileID: 4935041370064349332}
+  - {fileID: 5610348943359600898}
+  horizontalSpeed: 0.1
+  descentSpeed: 0.5
   speedIncreasePerDestroyedAlien: 0.1
 --- !u!1001 &8360959763431849
 PrefabInstance:
@@ -65,6 +130,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 516861779345099578, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 516861779345099578, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
+    - target: {fileID: 1882724446680089221, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 1882724446680089221, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 2178545346969816190, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -77,6 +158,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 5123581783671728000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -137,6 +226,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 7384442434139957374, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -145,6 +242,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 9164768826495082016, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -160,9 +265,34 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+--- !u!1 &292751069413613250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 292095933836812139, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8360959763431849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1803883537180208558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1807380214534335495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8360959763431849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3170031667533085521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162515666370706168, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8360959763431849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4629043322605173891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4620726614968778026, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8360959763431849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5546146243130621443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542359527707688874, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8360959763431849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6715199664668194108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6713911274950947989, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
   m_PrefabInstance: {fileID: 8360959763431849}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4465486999721159412
@@ -177,6 +307,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 516861779345099578, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 516861779345099578, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
+    - target: {fileID: 1882724446680089221, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 1882724446680089221, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 2178545346969816190, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -189,6 +335,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 5123581783671728000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -245,10 +399,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6347574607234697219, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 6347574607234697219, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 6485816173914281196, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 7384442434139957374, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -257,10 +427,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 9164768826495082016, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9182051545550401338, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 9182051545550401338, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6959413593633471312, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
@@ -270,9 +456,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+--- !u!1 &1592897655726608396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162515666370706168, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1771447683638966881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2697069639937822869, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2660926436598236915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1807380214534335495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4176283193788134815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 292095933836812139, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4607002143875210584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150805502230804396, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6977204470601080417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6713911274950947989, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8147841189006382430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542359527707688874, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 4465486999721159412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9068145853057275870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4620726614968778026, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
   m_PrefabInstance: {fileID: 4465486999721159412}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6731143390113137811
@@ -299,6 +520,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 5123581783671728000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -359,6 +588,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 7384442434139957374, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -367,6 +604,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 9164768826495082016, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -387,6 +632,21 @@ PrefabInstance:
 --- !u!4 &1262056693281143609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542359527707688874, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 6731143390113137811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4935041370064349332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1807380214534335495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 6731143390113137811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6441388765356514296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 292095933836812139, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 6731143390113137811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8541728145916280427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162515666370706168, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
   m_PrefabInstance: {fileID: 6731143390113137811}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7365766510692652026
@@ -481,6 +741,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 9164768826495082016, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -505,6 +773,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5542359527707688874, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
   m_PrefabInstance: {fileID: 7365766510692652026}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5610348943359600898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162515666370706168, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 7365766510692652026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8841901894201789159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,6 +790,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 516861779345099578, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 516861779345099578, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
+    - target: {fileID: 1882724446680089221, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 1882724446680089221, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 2178545346969816190, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -529,10 +818,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 4833984239852901288, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 5123581783671728000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5207777432150945671, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 5207777432150945671, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 5542359527707688874, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -581,14 +886,50 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5859818100727687363, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859818100727687363, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859818100727687363, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5904607690901550328, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6347574607234697219, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 6347574607234697219, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 6485816173914281196, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 6777180779816050884, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
+    - target: {fileID: 7365690857542916452, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 7365690857542916452, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 7384442434139957374, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -597,10 +938,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 8206502492562097495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     - target: {fileID: 9164768826495082016, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9182051545550401338, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmGunnerManager
+      value: 
+      objectReference: {fileID: 8892092795373465435}
+    - target: {fileID: 9182051545550401338, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 5041959377186628479}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6959413593633471312, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
@@ -608,8 +965,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+--- !u!1 &2853070318714535538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6713911274950947989, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3917802153376544077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542359527707688874, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4221175440601544653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4620726614968778026, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5083534377407212588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4339474942679033547, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5861221416701161503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3162515666370706168, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6906644279544535666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2697069639937822869, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7179199976917116640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1807380214534335495, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7562065638538140367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316568747405774888, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8692925996504218955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150805502230804396, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
+  m_PrefabInstance: {fileID: 8841901894201789159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9131335601133294988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 292095933836812139, guid: 0c88b9de693726742a18e24fc444bf84, type: 3}
   m_PrefabInstance: {fileID: 8841901894201789159}
   m_PrefabAsset: {fileID: 0}

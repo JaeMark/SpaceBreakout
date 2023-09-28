@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &11913684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6906644279544535666, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &39560790
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,101 +198,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39560790}
   m_CullTransparentMesh: 1
---- !u!1 &125926484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+--- !u!114 &125926487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5041959377186628479, guid: c553b18926bb08f4ca050785867e5566, type: 3}
   m_PrefabInstance: {fileID: 968845095593809307}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &125926487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125926484}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60896fb706045f84e8c13af0f8731100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alienShips:
-  - {fileID: 1878969103}
-  - {fileID: 11913684}
-  - {fileID: 685187103}
-  - {fileID: 2078842141}
-  - {fileID: 454192850}
-  - {fileID: 191982746}
-  - {fileID: 1599688052}
-  - {fileID: 1274283468}
-  - {fileID: 2005750321}
-  - {fileID: 1509105895}
-  - {fileID: 941024785}
-  - {fileID: 536553591}
-  - {fileID: 610186811}
-  - {fileID: 1653266155}
-  - {fileID: 1102937543}
-  - {fileID: 580957942}
-  - {fileID: 941184660}
-  - {fileID: 180532949}
-  - {fileID: 873763248}
-  - {fileID: 819771058}
-  - {fileID: 2096774720}
-  - {fileID: 381125321}
-  - {fileID: 939750492}
-  - {fileID: 1149406264}
-  - {fileID: 1089366147}
-  horizontalSpeed: 0.1
-  descentSpeed: 0.5
-  speedIncreasePerDestroyedAlien: 0.1
---- !u!114 &125926488
+--- !u!114 &125926488 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8892092795373465435, guid: c553b18926bb08f4ca050785867e5566, type: 3}
+  m_PrefabInstance: {fileID: 968845095593809307}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125926484}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48e45a5a508f3c64184952e20a5415db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alienShips:
-  - {fileID: 1878969103}
-  - {fileID: 11913684}
-  - {fileID: 685187103}
-  - {fileID: 2078842141}
-  - {fileID: 454192850}
-  - {fileID: 191982746}
-  - {fileID: 1599688052}
-  - {fileID: 1274283468}
-  - {fileID: 2005750321}
-  - {fileID: 1509105895}
-  - {fileID: 941024785}
-  - {fileID: 536553591}
-  - {fileID: 610186811}
-  - {fileID: 1653266155}
-  - {fileID: 1102937543}
-  - {fileID: 580957942}
-  - {fileID: 941184660}
-  - {fileID: 180532949}
-  - {fileID: 873763248}
-  - {fileID: 819771058}
-  - {fileID: 2096774720}
-  - {fileID: 381125321}
-  - {fileID: 939750492}
-  - {fileID: 1149406264}
-  - {fileID: 1089366147}
-  shootInterval: 1
---- !u!1 &180532949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 292751069413613250, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &191982746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7179199976917116640, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &366946056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,21 +276,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: RightBorder
       objectReference: {fileID: 0}
+    - target: {fileID: 5387946708690649675, guid: bd5cfb757a824a44a96a5abc329e60ed, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5cfb757a824a44a96a5abc329e60ed, type: 3}
---- !u!1 &381125321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6441388765356514296, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &454192850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5861221416701161503, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &476123422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,21 +350,6 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5203579126214609665, guid: 5a6aef23d1308514384d193861871f2d, type: 3}
   m_PrefabInstance: {fileID: 8988521351195952179}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &536553591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4176283193788134815, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &580957942 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4607002143875210584, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &610186811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1592897655726608396, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &665629389
 GameObject:
@@ -584,16 +485,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665629389}
   m_CullTransparentMesh: 1
---- !u!1 &685187103 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2853070318714535538, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &819771058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1803883537180208558, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &863549389
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,26 +553,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &873763248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3170031667533085521, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &939750492 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8541728145916280427, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &941024785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6977204470601080417, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &941184660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6715199664668194108, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &988977718
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,21 +821,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022787478}
   m_CullTransparentMesh: 1
---- !u!1 &1089366147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5610348943359600898, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1102937543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9068145853057275870, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1149406264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4935041370064349332, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1237365908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,11 +924,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1274283468 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8692925996504218955, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1432113747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,16 +958,6 @@ Transform:
   - {fileID: 1865156268}
   m_Father: {fileID: 1237365912}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1509105895 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1771447683638966881, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1599688052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4221175440601544653, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1608895772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,11 +1067,6 @@ Transform:
   - {fileID: 1022787479}
   m_Father: {fileID: 1237365912}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1653266155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2660926436598236915, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861353035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,26 +1339,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1878969103 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7562065638538140367, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2005750321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5083534377407212588, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2078842141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9131335601133294988, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2096774720 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4629043322605173891, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-  m_PrefabInstance: {fileID: 968845095593809307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &968845095593809307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1680,10 +1496,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 125926487}
     - target: {fileID: 2646389171778365987, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2646389171778365987, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 515550795}
@@ -1707,10 +1519,6 @@ PrefabInstance:
       propertyPath: alienSwarmMovementController
       value: 
       objectReference: {fileID: 125926487}
-    - target: {fileID: 3163496615525179940, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3163496615525179940, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -1721,10 +1529,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3163496615525179940, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163496615525179940, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3209529182823121348, guid: c553b18926bb08f4ca050785867e5566, type: 3}
@@ -1815,114 +1619,6 @@ PrefabInstance:
       propertyPath: alienSwarmMovementController
       value: 
       objectReference: {fileID: 125926487}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.size
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[0]
-      value: 
-      objectReference: {fileID: 1878969103}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[1]
-      value: 
-      objectReference: {fileID: 11913684}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[2]
-      value: 
-      objectReference: {fileID: 685187103}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[3]
-      value: 
-      objectReference: {fileID: 2078842141}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[4]
-      value: 
-      objectReference: {fileID: 454192850}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[5]
-      value: 
-      objectReference: {fileID: 191982746}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[6]
-      value: 
-      objectReference: {fileID: 1599688052}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[7]
-      value: 
-      objectReference: {fileID: 1274283468}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[8]
-      value: 
-      objectReference: {fileID: 2005750321}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[9]
-      value: 
-      objectReference: {fileID: 1509105895}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[10]
-      value: 
-      objectReference: {fileID: 941024785}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[11]
-      value: 
-      objectReference: {fileID: 536553591}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[12]
-      value: 
-      objectReference: {fileID: 610186811}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[13]
-      value: 
-      objectReference: {fileID: 1653266155}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[14]
-      value: 
-      objectReference: {fileID: 1102937543}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[15]
-      value: 
-      objectReference: {fileID: 580957942}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[16]
-      value: 
-      objectReference: {fileID: 941184660}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[17]
-      value: 
-      objectReference: {fileID: 180532949}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[18]
-      value: 
-      objectReference: {fileID: 873763248}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[19]
-      value: 
-      objectReference: {fileID: 819771058}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[20]
-      value: 
-      objectReference: {fileID: 2096774720}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[21]
-      value: 
-      objectReference: {fileID: 381125321}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[22]
-      value: 
-      objectReference: {fileID: 939750492}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[23]
-      value: 
-      objectReference: {fileID: 1149406264}
-    - target: {fileID: 5524729530540834241, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      propertyPath: alienShips.Array.data[24]
-      value: 
-      objectReference: {fileID: 1089366147}
     - target: {fileID: 6778152995518685549, guid: c553b18926bb08f4ca050785867e5566, type: 3}
       propertyPath: playerShip
       value: 
@@ -2010,13 +1706,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 125926488}
-    - targetCorrespondingSourceObject: {fileID: 5353505163568727831, guid: c553b18926bb08f4ca050785867e5566, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 125926487}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c553b18926bb08f4ca050785867e5566, type: 3}
 --- !u!1001 &6026053639334529601
 PrefabInstance:
@@ -2074,14 +1764,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: LeftBorder
       objectReference: {fileID: 0}
-    - target: {fileID: 7751902050905933693, guid: bd5cfb757a824a44a96a5abc329e60ed, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7751902050905933693, guid: bd5cfb757a824a44a96a5abc329e60ed, type: 3}
-      propertyPath: m_Constraints
-      value: 7
-      objectReference: {fileID: 0}
+    - target: {fileID: 5387946708690649675, guid: bd5cfb757a824a44a96a5abc329e60ed, type: 3}
+      propertyPath: alienSwarmMovementController
+      value: 
+      objectReference: {fileID: 125926487}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2095,10 +1781,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2971743863189055838, guid: 5a6aef23d1308514384d193861871f2d, type: 3}
-      propertyPath: boostMaxVelocity
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 5203579126214609665, guid: 5a6aef23d1308514384d193861871f2d, type: 3}
       propertyPath: m_Name
       value: Player

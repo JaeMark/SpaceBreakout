@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5401187830160960103}
   m_Layer: 0
   m_Name: BorderLine
-  m_TagString: Border
+  m_TagString: LeftBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad2049f8fa8104fa1d5816115d8cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alienSwarmMovementController: {fileID: 0}
 --- !u!50 &5401187830160960103
 Rigidbody2D:
   serializedVersion: 4
