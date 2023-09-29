@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStateHandler : MonoBehaviour
 {
+    [Header("Game State UI")]
     [SerializeField] private GameObject loseUI;
     [SerializeField] private GameObject winUI;
 
@@ -22,13 +23,14 @@ public class GameStateHandler : MonoBehaviour
 
     public void TriggerLoseState()
     {
+        // Trigger lose condition
         loseUI.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void TriggerWinState()
     {
-        // Trigger lose condition
+        // Trigger win condition
         winUI.SetActive(true);
         Time.timeScale = 0;
     }

@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
+    [Header("Projectile Settings")]
     [SerializeField] private float projectileSpeed = 0.5f;
     [SerializeField] private float projectileSpeedIncrement = 0.1f;
+    [SerializeField] private float initialProjectileSpeedIncrement = 0.1f;
+    [SerializeField] private float maxProjectileSpeedIncrement = 0.5f;
+    [SerializeField] private float projectileSpeedEasingLogBase = 4.0f;
     [SerializeField] private float projectileLifetime = 10.0f;
 
     private bool isReflected = false;
+    private float elapsedTime = 0f;
     private void Start()
     {
         StartCoroutine(DestroyAfterDelay(projectileLifetime)); // Destroy projectile after some time
@@ -24,7 +29,12 @@ public class ProjectileController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.Translate(Vector3.down * projectileSpeed * Time.deltaTime);
-        //transform.Translate(0, -projectileSpeed * Time.deltaTime, 0);
+
+        // Apply logarithmic easing to projectileSpeedIncrement
+        projectileSpeedIncrement = Mathf.Lerp(initialProjectileSpeedIncrement, maxProjectileSpeedIncrement, 
+                                              Mathf.Log(elapsedTime + 1, projectileSpeedEasingLogBase));
+
+        elapsedTime += Time.deltaTime;
         projectileSpeed += projectileSpeedIncrement;
     }
 
@@ -40,10 +50,12 @@ public class ProjectileController : MonoBehaviour
 
         if (collidedObject.CompareTag("LeftBorder") || collidedObject.CompareTag("RightBorder") || collidedObject.CompareTag("Player"))
         {
+            // Reflect on player or border contact
             Reflect(collidedObject);
         } 
         else if (collidedObject.CompareTag("Alien") && isReflected)
         {
+            // Destroy alien on contact only after being reflected by the player
             DestroyAlien(collidedObject);
         }
     }

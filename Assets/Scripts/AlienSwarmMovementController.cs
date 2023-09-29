@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class AlienSwarmMovementController : MonoBehaviour
 {
+    [Header("Swarm Reference")]
     [SerializeField] private GameObject[] alienShips;
+
+    [Header("Movement")]
     [SerializeField] private float horizontalSpeed = 0.1f;
     [SerializeField] private float descentSpeed = 0.5f;
     [SerializeField] private float speedIncreasePerDestroyedAlien = 0.1f;
@@ -39,8 +42,8 @@ public class AlienSwarmMovementController : MonoBehaviour
             StopCoroutine(swarmMovementCoroutine);
         }
 
-        isMovingRight = !isMovingRight;
-        MoveSwarmDown();
+        isMovingRight = !isMovingRight; // Change the movement direction from left to right or vice versa
+        MoveSwarmDown(); // Descend on direction change
         swarmMovementCoroutine = StartCoroutine(MoveSwarmHorizontally());
     }
 

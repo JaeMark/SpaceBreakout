@@ -12,6 +12,7 @@ public class BorderChecker : MonoBehaviour
         if (other.CompareTag("Alien") && !eventTriggered)
         {
             eventTriggered = true;
+            // Change direction of swarm on contact
             alienSwarmMovementController.ChangeDirection();
         }
     }

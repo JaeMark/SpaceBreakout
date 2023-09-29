@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class AlienController : MonoBehaviour
 {
+    [Header("Script References")]
     [SerializeField] private AlienSwarmMovementController alienSwarmMovementController;
     [SerializeField] private AlienSwarmGunnerManager alienSwarmGunnerManager;
+
+    [Header("GameObject References")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject playerShip;
     [SerializeField] private GameObject muzzle;
+
+    [Header("Rotation")]
     [SerializeField] private float rotationSpeed = 1f;
 
     private bool isGunner = false;
@@ -54,11 +59,12 @@ public class AlienController : MonoBehaviour
     {
         if (playerShip != null)
         {
+            // Calculate look at rotation between the alien and the player ship
             Vector3 targetDirection = playerShip.transform.position - transform.position;
-
             float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg + 90f;
             Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
+            // Smoothly interpolate the current rotation towards the target rotation
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }

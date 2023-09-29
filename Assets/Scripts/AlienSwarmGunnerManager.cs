@@ -67,9 +67,10 @@ public class AlienSwarmGunnerManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(shootInterval);
+            yield return new WaitForSeconds(shootInterval); // Wait for the specified shoot interval
 
             int randomIndex = Random.Range(0, alienGunners.Count);
+            // Check if there are gunners available and the selected gunner is still active
             if (alienGunners.Count > 0 && alienGunners[randomIndex] != null)
             {
                 alienGunners[randomIndex].GetComponent<AlienController>().Shoot();
