@@ -38,77 +38,35 @@ public class ProjectileController : MonoBehaviour
     {
         GameObject collidedObject = other.gameObject;
 
-        Reflect(collidedObject);
-
-        if (collidedObject.CompareTag("LeftBorder") || collidedObject.CompareTag("RightBorder"))
+        if (collidedObject.CompareTag("LeftBorder") || collidedObject.CompareTag("RightBorder") || collidedObject.CompareTag("Player"))
         {
-            ReflectOnBorder(collidedObject);
-        }
-        else if (collidedObject.CompareTag("Player"))
-        {
-            ReflectOnPlayer(collidedObject);
-        }
+            Reflect(collidedObject);
+        } 
         else if (collidedObject.CompareTag("Alien") && isReflected)
         {
             DestroyAlien(collidedObject);
         }
     }
 
-    private void ReflectOnBorder(GameObject collidedObject)
-    {
-        // Calculate the reflection angle based on which border was hit
-        float reflectionAngle = 0f;
-
-        if (collidedObject.CompareTag("LeftBorder"))
-        {
-            reflectionAngle = transform.rotation.eulerAngles.z - 90.0f;
-        }
-        else if (collidedObject.CompareTag("RightBorder"))
-        {
-            reflectionAngle = transform.rotation.eulerAngles.z - 270.0f;
-        }
-        Debug.Log("Border Reflection Angle: " + reflectionAngle);
-
-        // Apply the reflection angle to the projectile
-        transform.rotation = Quaternion.Euler(0, 0, reflectionAngle);
-
-        isReflected = true;
-    }
-
-    
     private void Reflect(GameObject contactObject)
     {
-        Debug.Log("Euler Angle: " + transform.localRotation.eulerAngles);
-        /*
-        float angle = Vector3.Angle(transform.position, contactObject.l); // get angle of contact
-        double radians = 3.1415 * angle / 180.0; // convert to radians
-
-        // Rotate [i]away[/i] from rocket.velocity by that many radians
-        Vector3 new Velocity= Vector3.RotateTowards(contactObject.normal, transform.position, -radians, 0.0)
-        */
-    }
-    
-
-    private void ReflectOnPlayer(GameObject collidedObject)
-    {
-        Rigidbody2D collidedObjectRigidBody = collidedObject.GetComponent<Rigidbody2D>();
-        PlayerController playerController = collidedObject.GetComponent<PlayerController>();
-
-        if (collidedObjectRigidBody == null || playerController == null)
+        // Get the normal vector of the contact surface
+        Vector2 surfaceNormal = contactObject.transform.up;
+        float currentAngle = transform.rotation.eulerAngles.z;
+        if (surfaceNormal == Vector2.up || surfaceNormal == -Vector2.up)
         {
-            return;
+            // Surface normal is (0, 1) or (0, -1)
+            // Apply the reflection angle along the Y-axis
+            float newAngle = 180f - currentAngle;
+            transform.rotation = Quaternion.Euler(0, 0, newAngle);
         }
-
-        float playerVelocityX = playerController.GetCurrentSpeed();
-        float playerMaxMoveSpeed = playerController.GetMoveSpeed();
-        Debug.Log("Velocity: " + playerVelocityX);
-
-        // Calculate the reflected angle based on the velocity components
-        float reflectedAngle = 180.0f - Mathf.Atan2(playerVelocityX, playerMaxMoveSpeed) * Mathf.Rad2Deg;
-        Debug.Log("Reflected Angle: " + reflectedAngle);
-        
-        Quaternion reflectedRotation = Quaternion.Euler(0, 0, reflectedAngle);
-        transform.rotation = reflectedRotation;
+        else if (surfaceNormal == Vector2.right || surfaceNormal == -Vector2.right)
+        {
+            // Surface normal is (1, 0) or (-1, 0)
+            // Apply the reflection angle along the X-axis
+            float newAngle = -currentAngle;
+            transform.rotation = Quaternion.Euler(0, 0, newAngle);
+        }
 
         isReflected = true;
     }
