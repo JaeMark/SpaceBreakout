@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
@@ -36,6 +37,9 @@ public class ProjectileController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         GameObject collidedObject = other.gameObject;
+
+        Reflect(collidedObject);
+
         if (collidedObject.CompareTag("LeftBorder") || collidedObject.CompareTag("RightBorder"))
         {
             ReflectOnBorder(collidedObject);
@@ -71,6 +75,19 @@ public class ProjectileController : MonoBehaviour
         isReflected = true;
     }
 
+    
+    private void Reflect(GameObject contactObject)
+    {
+        Debug.Log("Euler Angle: " + transform.localRotation.eulerAngles);
+        /*
+        float angle = Vector3.Angle(transform.position, contactObject.l); // get angle of contact
+        double radians = 3.1415 * angle / 180.0; // convert to radians
+
+        // Rotate [i]away[/i] from rocket.velocity by that many radians
+        Vector3 new Velocity= Vector3.RotateTowards(contactObject.normal, transform.position, -radians, 0.0)
+        */
+    }
+    
 
     private void ReflectOnPlayer(GameObject collidedObject)
     {
